@@ -1,11 +1,9 @@
-import { FC } from "react";
+import { SVGProps } from "react";
+interface IconProps extends SVGProps<SVGSVGElement> {
+  size?: number;
+}
 
-export const AddIcon = ({ size = 36, width, height, ...props }: {
-    [x: string]: any;
-    size?: number | undefined;
-    width?: any;
-    height?: any;
-}) => {
+export const AddIcon = ({ size = 36, width, height, ...props }:IconProps) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -20,12 +18,7 @@ export const AddIcon = ({ size = 36, width, height, ...props }: {
   );
 };
 
-export const DeleteIcon = ({ size = 36, width, height, ...props }: {
-    [x: string]: any;
-    size?: number | undefined;
-    width?: any;
-    height?: any;
-}) => {
+export const DeleteIcon = ({ size = 36, width, height, ...props }:IconProps) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
